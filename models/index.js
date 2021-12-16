@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
+const CategorySchema = require('./category');
+const ProductSchema = require('./product');
 
-const CategoriesSchema = require('./categories');
-const ProductsSchema = require('./products');
-
-const Categories = mongoose.model('categories', CategoriesSchema);
-const Products = mongoose.model('products', ProductsSchema);
+const Category = mongoose.model('categories', CategorySchema);
+const Product = mongoose.model('products', ProductSchema);
 
 module.exports = {
-  Categories,
-  Products
+  Category,
+  Product
 };
