@@ -19,3 +19,4 @@ _____________
 
 **[Mahalo POS Workspace](https://trello.com/b/F7w2HI6G/mahalo-pos-system)**
 
+**![screen shot of a prototype](https://trello.com/1/cards/61bab9e105c6ac413592221d/attachments/61baba2033050970b4d2adfd/previews/61baba2133050970b4d2ae05/download/Screen_Shot_2021-12-15_at_8.01.18_PM.png)**
