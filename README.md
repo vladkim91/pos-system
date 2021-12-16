@@ -37,3 +37,14 @@ ________________
 
 **![screen shot ](https://i.ibb.co/Fzkmq4x/Screen-Shot-2021-12-15-at-8-35-44-PM.png)**
 
+
+# Summary
+
+### Goals
+
+* Create first full stack portfolio piece
+* Learn more about CRUD with mongoose
+* Continue developing this product post project due date **Thursday, December 23 9:30 PST**
+
+
+# Let's go
