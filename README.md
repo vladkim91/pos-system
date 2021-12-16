@@ -17,10 +17,13 @@ Clicked products will be rendered on queue screen until user hits send. Once pro
 
 _____________
 
-**[Mahalo POS Workspace](https://trello.com/b/F7w2HI6G/mahalo-pos-system)**
+
+### [Mahalo POS Workspace](https://trello.com/b/F7w2HI6G/mahalo-pos-system) 
+
+## Screenshots
 
 **![screen shot ](https://i.ibb.co/XDm6Nwq/Screen-Shot-2021-12-15-at-8-01-18-PM.png)**
-**![screen shot ](https://ibb.co/FWbtqzV)**
-**![screen shot ](https://ibb.co/9Wmc3H8)**
+**![screen shot ](https://i.ibb.co/MhDL576/Screen-Shot-2021-12-15-at-9-05-53-PM.png)**
+**![screen shot ](https://i.ibb.co/Fzkmq4x/Screen-Shot-2021-12-15-at-8-35-44-PM.png)**
 
 
