@@ -19,7 +19,7 @@ _____________
 
 **[Mahalo POS Workspace](https://trello.com/b/F7w2HI6G/mahalo-pos-system)**
 
-**![screen shot ](https://ibb.co/T1zJpCs)**
+**![screen shot ](https://i.ibb.co/XDm6Nwq/Screen-Shot-2021-12-15-at-8-01-18-PM.png)**
 **![screen shot ](https://ibb.co/FWbtqzV)**
 **![screen shot ](https://ibb.co/9Wmc3H8)**
 
