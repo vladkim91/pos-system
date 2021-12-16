@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Login from '../components/Login';
 import About from '../pages/About';
+import UserUi from '../components/UserUi';
 import { Route, Link } from 'react-router-dom';
 
 const Home = () => {
@@ -19,8 +20,6 @@ const Home = () => {
       setAccess(true);
     }
     setPasscode('');
-
-    console.log(passcode, access);
   };
 
   return (
@@ -37,10 +36,13 @@ const Home = () => {
               clickHandler={clickHandler}
               checkPasscodeHandler={checkPasscodeHandler}
               passcode={passcode}
+              access={access}
             />
           )}
         />
-      ) : null}
+      ) : (
+        <Route exact path="/" component={UserUi} />
+      )}
 
       <Route path="/about" component={About} />
     </div>
