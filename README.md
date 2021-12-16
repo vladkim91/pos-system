@@ -1,4 +1,4 @@
-### Mahalo POS system
+# Mahalo POS system
 
 ## Overview
 _____________
