@@ -25,13 +25,15 @@ ________________
 
 ## Screenshots
 
-
 Data flowchart
+
 **![screen shot ](https://i.ibb.co/XDm6Nwq/Screen-Shot-2021-12-15-at-8-01-18-PM.png)**
 
 Component heirarchy
+
 **![screen shot ](https://i.ibb.co/MhDL576/Screen-Shot-2021-12-15-at-9-05-53-PM.png)**
 
 Data models (ERD)
+
 **![screen shot ](https://i.ibb.co/Fzkmq4x/Screen-Shot-2021-12-15-at-8-35-44-PM.png)**
 
