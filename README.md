@@ -1,1 +1,2 @@
-## pos-system
+### Mahalo POS system
+
