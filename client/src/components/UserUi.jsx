@@ -1,4 +1,5 @@
 import React from 'react'
+import Categories from './Categories'
 
 const UserUi = () => {
 
@@ -6,7 +7,7 @@ const UserUi = () => {
     <h4>Access granted</h4>
 
     <div className='queue'>queue</div>
-    <div className="categories">categories</div>
+    <Categories />
     <div className="products">products</div>
   </div>)
 }
