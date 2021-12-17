@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Categories from './Categories';
 import Products from './Products';
+import Queue from './Queue';
 
 const UserUi = () => {
   const [selectProductById, setSelectProductsById] = useState([])
- 
+  
+
   const clickHandler = (e) => {
     setSelectProductsById(e.target.attributes[0].textContent)
      }
@@ -13,7 +15,7 @@ const UserUi = () => {
     <div className="user-ui">
       <h4>Access granted</h4>
 
-      <div className="queue">queue</div>
+      <Queue />
       <Categories clickHandler={clickHandler}/>
       <Products selectProductById={selectProductById}/>
     </div>
