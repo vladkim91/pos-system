@@ -4,20 +4,28 @@ import Products from './Products';
 import Queue from './Queue';
 
 const UserUi = () => {
+  const [queue, setQueue] = useState([])
   const [selectProductById, setSelectProductsById] = useState([])
-  
+
 
   const clickHandler = (e) => {
     setSelectProductsById(e.target.attributes[0].textContent)
-     }
+    
+  }
+
+  const productClickHandler = () => {
+    console.log(queue)
+  }
+
+
 
   return (
     <div className="user-ui">
       <h4>Access granted</h4>
 
-      <Queue />
+      <Queue queue={queue}/>
       <Categories clickHandler={clickHandler}/>
-      <Products selectProductById={selectProductById}/>
+      <Products productClickHandler={productClickHandler}setQueue={setQueue} selectProductById={selectProductById}/>
     </div>
   );
 };
