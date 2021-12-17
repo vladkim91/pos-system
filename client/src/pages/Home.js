@@ -5,7 +5,7 @@ import UserUi from '../components/UserUi';
 import { Route, Link } from 'react-router-dom';
 
 const Home = () => {
-  const [access, setAccess] = useState(false);
+  const [access, setAccess] = useState(true);
   const [passcode, setPasscode] = useState('');
 
   const clickHandler = (e) => {
