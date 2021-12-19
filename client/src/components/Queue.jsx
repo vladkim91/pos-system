@@ -7,7 +7,7 @@ const Queue = ({order}) => {
   const { clicker } = useContext(ProductContext);
   
   useEffect(() => {
-    console.log(order)
+  
     setQueueList([...tempQueue, order])
     
     console.log(queueList)
@@ -17,7 +17,7 @@ const Queue = ({order}) => {
 
   return (<div className='queue'>
     {queueList.map((e,i) => {
-      return <p key={i}>{e.name}</p>
+      return <p className="queue-product"key={i}>{e.name} {e.mods}</p>
     })}
     
     </div>);

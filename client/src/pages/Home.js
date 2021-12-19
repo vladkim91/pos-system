@@ -6,7 +6,7 @@ import { Route, Link } from 'react-router-dom';
 import '../styles/App.css';
 
 const Home = () => {
-  const [access, setAccess] = useState(false);
+  const [access, setAccess] = useState(true);
   const [passcode, setPasscode] = useState('');
   const [message, setMessage] = useState('Use your passcode to login');
 

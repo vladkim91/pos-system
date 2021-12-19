@@ -22,9 +22,7 @@ const UserUi = () => {
     <div className="user-ui-window">
        <h4>Welcome back {userName}</h4>
       <div className="user-ui">
-     
-
-      <ProductContext.Provider value ={{ setPendingOrder,clicker, queue, setQueue, setClicker}}>
+           <ProductContext.Provider value ={{ pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
       <Queue order={pendingOrder} />
       <Categories clickHandler={clickHandler} />
         <Products selectProductById={selectProductById} />
