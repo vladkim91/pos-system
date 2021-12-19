@@ -22,7 +22,19 @@ const getAllProducts = async (req, res) => {
   }
 };
 
+const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findOne({ _id: `${req.params.id}` });
+    return res.status(201).json({
+      product
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getAllCategories,
-  getAllProducts
+  getAllProducts,
+  getProductById
 };

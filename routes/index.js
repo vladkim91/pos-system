@@ -10,6 +10,7 @@ router.get('/', (req, res) => res.send('This is root!'));
 
 router.get('/ui/categories', controllers.getAllCategories);
 router.get('/ui/products', controllers.getAllProducts);
+router.get('/ui/products/:id', controllers.getProductById);
 
 // router.post('/rollercoasters/reviews', controllers.postReview);
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from './Product';
 
-const Products = ({ selectProductById, setQueue,productClickHandler }) => {
+const Products = ({ selectProductById }) => {
   const [filteredList, setFilteredList] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Products = ({ selectProductById, setQueue,productClickHandler }) => {
   return (
     <div className="products">
       {filteredList.map((e, i) => {
-        return <Product productClickHandler={productClickHandler}setQueue={setQueue} e={e} key={i} />;
+        return <Product e={e} key={i} />;
       })}
     </div>
   );

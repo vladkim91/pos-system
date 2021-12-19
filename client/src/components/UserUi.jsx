@@ -1,31 +1,32 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Categories from './Categories';
 import Products from './Products';
 import Queue from './Queue';
+import { ProductContext } from '../ProductContext';
 
 const UserUi = () => {
-  const [queue, setQueue] = useState([])
-  const [selectProductById, setSelectProductsById] = useState([])
-
+  // Retrieve  Id to use in Categories
+  const [selectProductById, setSelectProductsById] = useState([]);
+  // Retrieve Product ID and Object
+  const [queue, setQueue] = useState('');
+  const [pendingOrder, setPendingOrder] = useState([]);
+  const [clicker, setClicker] = useState(0)
 
   const clickHandler = (e) => {
-    setSelectProductsById(e.target.attributes[0].textContent)
-    
-  }
-
-  const productClickHandler = () => {
-    console.log(queue)
-  }
-
+    setSelectProductsById(e.target.attributes[0].textContent);
+  };
 
 
   return (
     <div className="user-ui">
       <h4>Access granted</h4>
 
-      <Queue queue={queue}/>
-      <Categories clickHandler={clickHandler}/>
-      <Products productClickHandler={productClickHandler}setQueue={setQueue} selectProductById={selectProductById}/>
+      <ProductContext.Provider value ={{ setPendingOrder,clicker, queue, setQueue, setClicker}}>
+      <Queue order={pendingOrder} />
+      <Categories clickHandler={clickHandler} />
+        <Products selectProductById={selectProductById} />
+      </ProductContext.Provider>
     </div>
   );
 };
