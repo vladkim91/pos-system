@@ -3,10 +3,12 @@ import Login from '../components/Login';
 import About from '../pages/About';
 import UserUi from '../components/UserUi';
 import { Route, Link } from 'react-router-dom';
+import '../styles/App.css';
 
 const Home = () => {
-  const [access, setAccess] = useState(true);
+  const [access, setAccess] = useState(false);
   const [passcode, setPasscode] = useState('');
+  const [message, setMessage] = useState('Use your passcode to login');
 
   const clickHandler = (e) => {
     let tempPasscode = passcode;
@@ -14,10 +16,16 @@ const Home = () => {
     setPasscode(tempPasscode);
   };
 
+  const clearHandler = () => {
+    setPasscode('');
+  };
+
   const checkPasscodeHandler = (e) => {
     e.preventDefault();
     if (passcode === '1111') {
       setAccess(true);
+    } else if (passcode !== '1111') {
+      setMessage('Invalid passcode. Try again');
     }
     setPasscode('');
   };
@@ -33,10 +41,12 @@ const Home = () => {
           component={(props) => (
             <Login
               {...props}
+              clearHandler={clearHandler}
               clickHandler={clickHandler}
               checkPasscodeHandler={checkPasscodeHandler}
               passcode={passcode}
               access={access}
+              message={message}
             />
           )}
         />

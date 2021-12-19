@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import DigitButton from './DigitButton';
 
-const Login = ({ clickHandler, checkPasscodeHandler, passcode, access }) => {
-  const buttons = [];
-  for (let i = 0; i < 10; i++) {
-    buttons.push(i);
-  }
+const Login = ({ clickHandler, checkPasscodeHandler, message,passcode, clearHandler }) => {
+  const buttons = [1,2,3,4,5,6,7,8,9,'Clear',0,'Enter'];
+
+
+
+
 
   return (
     <div className="login-ui">
-      <h4>Use your passcode to login</h4>
+      <h4>{message}</h4>
 
       <div className="user-id">{passcode}</div>
       <div className="buttons">
-        <div className="digit button">
+        <div className="digit-buttons">
           {buttons.map((e, i) => (
-            <DigitButton value={e} key={i} clickHandler={clickHandler} />
+            
+            <DigitButton passcodeHandler={checkPasscodeHandler}value={e} key={i} clickHandler={clickHandler} clearHandler={clearHandler}/>
           ))}
         </div>
-        <button onClick={checkPasscodeHandler} className="button enter">
-          Enter
-        </button>
+    
       </div>
     </div>
   );
