@@ -4,14 +4,17 @@ import Categories from './Categories';
 import Products from './Products';
 import Queue from './Queue';
 import { ProductContext } from '../ProductContext';
+import Mods from './Mods'
 
 const UserUi = () => {
   // Retrieve  Id to use in Categories
   const [selectProductById, setSelectProductsById] = useState([]);
   // Retrieve Product ID and Object
+  const [mods, setMods] = useState([]);
   const [queue, setQueue] = useState('');
   const [pendingOrder, setPendingOrder] = useState([]);
   const [clicker, setClicker] = useState(0)
+  const [clicked, setClicked] = useState(false);
   const userName = 'Vlad'
   const clickHandler = (e) => {
     setSelectProductsById(e.target.attributes[0].textContent);
@@ -22,10 +25,11 @@ const UserUi = () => {
     <div className="user-ui-window">
        <h4>Welcome back {userName}</h4>
       <div className="user-ui">
-           <ProductContext.Provider value ={{ pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
+           <ProductContext.Provider value ={{clicked, setClicked, mods, setMods, pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
       <Queue order={pendingOrder} />
       <Categories clickHandler={clickHandler} />
-        <Products selectProductById={selectProductById} />
+      {(clicked) ? <Mods mods={mods}/> : <Products selectProductById={selectProductById} />}
+        
       </ProductContext.Provider>
     </div>
     </div>
