@@ -37,12 +37,49 @@
 
 }
 
-.login-ui {
+.user-ui {
+ display: grid;
+  grid-template-columns: 2fr 1fr 4fr;
+  background-color: aqua;
+  margin: 50px;
+  border: black 2px outset;
+  border-radius: 20px
+;
+}
 
+.user-ui > div {
+  margin: 30px 20px;
 }
 
 .login-ui {
   text-align: center;
 }
 
+.queue {
+  background-color: grey;
 
+  height: 500px;
+ 
+}
+
+.categories {
+  background-color: black;
+  
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.products {
+  background-color: blue;
+ 
+  height: 500px;
+}
+
+.category {
+  margin: 5px 5px;
+  border-style: outset;
+  border: grey 2px solid;
+  height: 30px;
+}

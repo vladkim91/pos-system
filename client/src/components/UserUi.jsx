@@ -12,15 +12,17 @@ const UserUi = () => {
   const [queue, setQueue] = useState('');
   const [pendingOrder, setPendingOrder] = useState([]);
   const [clicker, setClicker] = useState(0)
-
+  const userName = 'Vlad'
   const clickHandler = (e) => {
     setSelectProductsById(e.target.attributes[0].textContent);
   };
 
 
   return (
-    <div className="user-ui">
-      <h4>Access granted</h4>
+    <div className="user-ui-window">
+       <h4>Welcome back {userName}</h4>
+      <div className="user-ui">
+     
 
       <ProductContext.Provider value ={{ setPendingOrder,clicker, queue, setQueue, setClicker}}>
       <Queue order={pendingOrder} />
@@ -28,6 +30,8 @@ const UserUi = () => {
         <Products selectProductById={selectProductById} />
       </ProductContext.Provider>
     </div>
+    </div>
+    
   );
 };
 

@@ -15,7 +15,7 @@ const Queue = ({order}) => {
   }, [clicker])
 
 
-  return (<div>
+  return (<div className='queue'>
     {queueList.map((e,i) => {
       return <p key={i}>{e.name}</p>
     })}
