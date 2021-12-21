@@ -6,7 +6,7 @@ const Categories = ({clickHandler}) => {
   
   useEffect(() => {
     const getCategories = async () => {
-      const res = await axios.get(`http://localhost:3001/api/ui/categories`);
+      const res = await axios.get(`http://localhost:3001/api//categories`);
       const categories = res.data.category;
     
       setCategories(categories);

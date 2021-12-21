@@ -1,26 +1,36 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { ProductContext } from '../ProductContext';
+import QueueItem from './QueueItem';
 
-const Queue = ({order}) => {
-  const [queueList, setQueueList] = useState([])
+const Queue = ({ order }) => {
+  const [queueList, setQueueList] = useState([]);
   const tempQueue = queueList;
-  const { clicker } = useContext(ProductContext);
-  
+  const { clicker, selectedMod } = useContext(ProductContext);
+  const [haveMod, setHaveMod] = useState(false);
+  const haveModsCheck = () => {
+    if (selectedMod) {
+      setHaveMod(true);
+    } else {
+      setHaveMod(false);
+    }
+  };
   useEffect(() => {
-  
-    setQueueList([...tempQueue, order])
+    haveModsCheck();
+  }, [selectedMod]);
+
+  useEffect(() => {
+    setQueueList([...tempQueue, order]);
     
-    console.log(queueList)
+    console.log(queueList);
+  }, [clicker]);
 
-  }, [clicker])
-
-
-  return (<div className='queue'>
-    {queueList.map((e,i) => {
-      return <p className="queue-product"key={i}>{e.name} {e.mods}</p>
-    })}
-    
-    </div>);
+  return (
+    <div className="queue">
+      {queueList.map((e, i) => (
+        <QueueItem haveMod={haveMod} e={e} key={i} />
+      ))}
+    </div>
+  );
 };
 
 export default Queue;

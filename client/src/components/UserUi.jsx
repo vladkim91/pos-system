@@ -11,6 +11,7 @@ const UserUi = () => {
   const [selectProductById, setSelectProductsById] = useState([]);
   // Retrieve Product ID and Object
   const [mods, setMods] = useState([]);
+  const [selectedMod, setSelectedMod] = useState('')
   const [queue, setQueue] = useState('');
   const [pendingOrder, setPendingOrder] = useState([]);
   const [clicker, setClicker] = useState(0)
@@ -25,10 +26,10 @@ const UserUi = () => {
     <div className="user-ui-window">
        <h4>Welcome back {userName}</h4>
       <div className="user-ui">
-           <ProductContext.Provider value ={{clicked, setClicked, mods, setMods, pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
+           <ProductContext.Provider value ={{selectedMod,setSelectedMod,clicked, setClicked, mods, setMods, pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
       <Queue order={pendingOrder} />
       <Categories clickHandler={clickHandler} />
-      {(clicked) ? <Mods mods={mods}/> : <Products selectProductById={selectProductById} />}
+      {(clicked) ? <Mods /> : <Products selectProductById={selectProductById} />}
         
       </ProductContext.Provider>
     </div>

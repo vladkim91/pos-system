@@ -4,10 +4,6 @@ import DigitButton from './DigitButton';
 const Login = ({ clickHandler, checkPasscodeHandler, message,passcode, clearHandler }) => {
   const buttons = [1,2,3,4,5,6,7,8,9,'Clear',0,'Enter'];
 
-
-
-
-
   return (
     <div className="login-ui">
       <h4>{message}</h4>

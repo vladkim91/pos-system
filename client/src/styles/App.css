@@ -77,16 +77,13 @@
   font-size: 18px;
 }
 
-.products {
+.products, .mods {
   background-color: blue;
-  display: grid;
-  grid-template-columns: repeat(4 1fr);
-  grid-template-rows: repeat(3 1fr);
-
+  display: flex;
   height: 500px;
 }
 
-.product {
+.product, .mod {
   height: 50px;
   margin: 5px 10px;
   border-style: outset;
@@ -97,6 +94,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
 }
+
 
 .queue > p{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

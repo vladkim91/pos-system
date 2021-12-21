@@ -1,7 +1,7 @@
 import React, { useEffect, useState,useContext } from 'react';
 import axios from 'axios';
 import Product from './Product';
-import { ProductContext } from '../ProductContext';
+
 
 const Products = ({ selectProductById }) => {
   const [filteredList, setFilteredList] = useState([]);
@@ -9,7 +9,7 @@ const Products = ({ selectProductById }) => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get(`http://localhost:3001/api/ui/products`);
+      const res = await axios.get(`http://localhost:3001/api/products`);
       const products = res.data.product;
 
       const filteredProducts = products.filter(
