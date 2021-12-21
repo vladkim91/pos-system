@@ -12,8 +12,8 @@ router.get('/categories', controllers.getAllCategories);
 router.get('/products', controllers.getAllProducts);
 router.get('/products/:id', controllers.getProductById);
 router.delete('/products/:id', controllers.deleteProduct);
-// router.post('/ui/products', controllers.addProduct);
-// router.put('ui/products/:id', controllers.updateProduct);
+router.post('/products', controllers.addProduct);
+router.put('/products/:id', controllers.updateProduct);
 
 // router.post('/rollercoasters/reviews', controllers.postReview);
 
