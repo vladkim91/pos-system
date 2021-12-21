@@ -30,22 +30,23 @@ const Sell = ({ setSold, queue, setQueue, setDisplaySum }) => {
         return acc + e.salePrice;
       },0);
       setDisplaySum(sum)
-     
+      alert(sum)
     };
 
     getTotal();
   
 
-    // const clearQueue = async () => {
-    //   const res = await axios.put(`http://localhost:3001/api/banks`, {
-    //     orders: []
-    //   });
-    // };
+    const clearQueue = async () => {
+      const res = await axios.put(`http://localhost:3001/api/banks`, {
+        orders: []
+      });
+      setQueue([]);
+      setDisplaySum(0)
+    };
     
     setSold(true);
 
-    // setQueue([]);
-    // clearQueue();
+    clearQueue();
   };
 
   return <button onClick={clickHandler}>Sell</button>;

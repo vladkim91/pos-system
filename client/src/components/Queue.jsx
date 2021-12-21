@@ -5,11 +5,11 @@ import axios from 'axios';
 import Sell from './Sell';
 
 const Queue = () => {
-  const [displaySum, setDisplaySum] = useState(0)
+  
   const [sold, setSold] = useState(false);
   const [queueList, setQueueList] = useState([]);
   const tempQueue = queueList;
-  const { clicker, setClicker, selectedMod, pendingOrder } =
+  const { clicker, displaySum, setDisplaySum, setClicker, selectedMod, pendingOrder } =
     useContext(ProductContext);
   const [haveMod, setHaveMod] = useState(false);
   const haveModsCheck = () => {
@@ -40,8 +40,9 @@ const Queue = () => {
       {queueList.map((e, i) => (
         <QueueItem haveMod={haveMod} e={e} key={i} />
       ))}
+     
       <Sell setSold={setSold} setDisplaySum={setDisplaySum}queue={queueList} setQueue={setQueueList} />
-      <p>{displaySum}</p>
+      <div>{displaySum}</div>
     </div>
   );
 };
