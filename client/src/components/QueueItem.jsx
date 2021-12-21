@@ -6,7 +6,7 @@ const QueueItem = ({ e, haveMod }) => {
     
 
   return <div className="queue-item">
-    {e.name}
+    {e.name} {e.salePrice}
 
   </div>;
 };

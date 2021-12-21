@@ -6,7 +6,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 const main = async () => {
   const bank = [
     {
-      orders: []
+      orders: [],
+      bank: 0
     }
   ];
 

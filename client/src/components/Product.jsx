@@ -2,9 +2,10 @@ import React, { useEffect, useState, useContext } from 'react';
 import { ProductContext } from '../ProductContext';
 
 const Product = ({ e }) => {
-   const {clicked, setClicked, mods, setMods, pendingOrder, setPendingOrder, setQueue, clicker, setClicker } =
+   const {clicked, setClicked, setMods, pendingOrder, setPendingOrder, setQueue, clicker, setClicker } =
     useContext(ProductContext);
-  const clickHandler = () => {
+  const clickHandler = async () => {
+   
     setPendingOrder(e);
     setQueue(e._id);
     let click = clicker;
@@ -12,10 +13,11 @@ const Product = ({ e }) => {
     setClicker(click);
   
     if (!clicked && e.mods.length !== 0) {
-      setMods(pendingOrder.mods);
+      setMods(e.mods);
       setClicked(true);
      
     } 
+   
   };
 
 
