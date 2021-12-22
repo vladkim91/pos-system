@@ -6,10 +6,10 @@ import Sell from './Sell';
 
 const Queue = () => {
   
-  const [sold, setSold] = useState(false);
+  
   const [queueList, setQueueList] = useState([]);
   const tempQueue = queueList;
-  const { clicker, displaySum, setDisplaySum, setClicker, selectedMod, pendingOrder } =
+  const { sold,setSold, clicker, displaySum, setDisplaySum, setClicker, selectedMod, pendingOrder } =
     useContext(ProductContext);
   const [haveMod, setHaveMod] = useState(false);
   const haveModsCheck = () => {

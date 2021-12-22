@@ -2,15 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../ProductContext';
 import axios from 'axios';
 
-const Sell = ({ setSold, queue, setQueue, setDisplaySum }) => {
+const Sell = ({ queue, setQueue, setDisplaySum }) => {
   const [sent, setSent] = useState(false)
-  const { clicker, setClicker, selectedMod, pendingOrder } =
+  const { sold, setSold, clicker, setClicker, selectedMod, pendingOrder } =
     useContext(ProductContext);
 
   const [accumulator, setAccumulator] = useState(0);
-  useEffect(() => {
-    
-  },[])
+ 
   const clickHandler = () => {
     const postOnQueue = async () => {
       const res = await axios.put(`http://localhost:3001/api/banks`, {
@@ -60,8 +58,9 @@ const Sell = ({ setSold, queue, setQueue, setDisplaySum }) => {
     };
     
     setSold(true);
-
     clearQueue();
+    setSold(false)
+    
   };
 
   return <button onClick={clickHandler}>Sell</button>;

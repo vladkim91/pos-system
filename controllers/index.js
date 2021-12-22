@@ -69,18 +69,18 @@ const updateProduct = async (req, res) => {
 //   }
 // };
 
-// const deleteProduct = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const deleted = await Product.findByIdAndDelete(id);
-//     if (deleted) {
-//       return res.status(200).send('Product deleted');
-//     }
-//     throw new Error('Product not found');
-//   } catch (error) {
-//     return res.status(500).send(error.message);
-//   }
-// };
+const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Product.findByIdAndDelete(id);
+    if (deleted) {
+      return res.status(200).send('Product deleted');
+    }
+    throw new Error('Product not found');
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 const getBank = async (req, res) => {
   try {
     const bank = await Bank.find({});
@@ -115,7 +115,7 @@ module.exports = {
   getAllProducts,
   getProductById,
   // addProduct
-  // deleteProduct,
+  deleteProduct,
   updateBank,
   getBank,
   updateProduct

@@ -7,6 +7,8 @@ import { ProductContext } from '../ProductContext';
 import Mods from './Mods'
 
 const UserUi = () => {
+  const [sold, setSold] = useState(false);
+
   // Retrieve  Id to use in Categories
   const [selectProductById, setSelectProductsById] = useState([]);
   // Retrieve Product ID and Object
@@ -27,7 +29,7 @@ const UserUi = () => {
     <div className="user-ui-window">
        <h4>Welcome back {userName}</h4>
       <div className="user-ui">
-           <ProductContext.Provider value ={{displaySum, setDisplaySum,selectedMod,setSelectedMod,clicked, setClicked, mods, setMods, pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
+           <ProductContext.Provider value ={{sold, setSold, displaySum, setDisplaySum,selectedMod,setSelectedMod,clicked, setClicked, mods, setMods, pendingOrder,setPendingOrder,clicker, queue, setQueue, setClicker}}>
       <Queue order={pendingOrder} />
       
       <Categories clickHandler={clickHandler} />
