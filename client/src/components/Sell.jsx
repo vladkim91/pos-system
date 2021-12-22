@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../ProductContext';
 import axios from 'axios';
+import {BASE_URL} from '../globals'
 
 const Sell = ({ queue, setQueue, setDisplaySum }) => {
   const [sent, setSent] = useState(false)
@@ -35,7 +36,7 @@ const Sell = ({ queue, setQueue, setDisplaySum }) => {
           // console.log(e.id)
           // console.log(e.quantity)
           const decreasedQuantity = e.quantity - 1
-          const res = await axios.put(`http://localhost:3001/api/products/${e.id}`, {quantity: decreasedQuantity})
+          const res = await axios.put(`${BASE_URL}/products/${e.id}`, {quantity: decreasedQuantity})
         })
       }
       adjustQuantity()

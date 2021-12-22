@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState, useContext } from 'react';
 import { ProductContext } from '../ProductContext';
+import {BASE_URL} from '../globals'
 
 const Product = ({ e }) => {
   const {
@@ -22,7 +23,7 @@ const Product = ({ e }) => {
       console.log(e.name, e.quantity);
     } else if (e.quantity < 1) {
       const removeItem = async () => {
-        const res = await axios.delete(`http://localhost:3001/api/products/${e._id}`)
+        const res = await axios.delete(`${BASE_URL}/products/${e._id}`)
       }
       removeItem()
     }

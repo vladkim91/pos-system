@@ -3,6 +3,7 @@ import { ProductContext } from '../ProductContext';
 import QueueItem from './QueueItem';
 import axios from 'axios';
 import Sell from './Sell';
+import {BASE_URL} from '../globals'
 
 
 const Queue = () => {
@@ -34,7 +35,7 @@ const Queue = () => {
     setQueueList([...tempQueue, pendingOrder]);
     console.log(queueList);
     const postOnQueue = async () => {
-      const res = await axios.put(`http://localhost:3001/api/banks`, {
+      const res = await axios.put(`${BASE_URL}/banks`, {
         orders: queueList
       });
     };

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {BASE_URL} from '../globals'
 
 const Categories = ({clickHandler}) => {
   const [categories, setCategories] = useState([]);
   
   useEffect(() => {
     const getCategories = async () => {
-      const res = await axios.get(`http://localhost:3001/api//categories`);
+      const res = await axios.get(`${BASE_URL}/categories`);
       const categories = res.data.category;
     
       setCategories(categories);
