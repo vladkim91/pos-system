@@ -4,11 +4,9 @@ import axios from 'axios';
 
 const Sell = ({ queue, setQueue, setDisplaySum }) => {
   const [sent, setSent] = useState(false)
-  const { sold, setSold, clicker, setClicker, selectedMod, pendingOrder } =
+  const { displaySum,sold, setSold, clicker, setClicker, selectedMod, pendingOrder } =
     useContext(ProductContext);
-
-  const [accumulator, setAccumulator] = useState(0);
- 
+  
   const clickHandler = () => {
     const postOnQueue = async () => {
       const res = await axios.put(`http://localhost:3001/api/banks`, {
@@ -27,14 +25,13 @@ const Sell = ({ queue, setQueue, setDisplaySum }) => {
       const sum = cleanArray.reduce((acc, e) => {
         return acc + e.salePrice;
       },0);
-      setDisplaySum(sum)
+      
       // alert(sum)
       const adjustQuantity =  () => {
         const arrayOfIds = cleanArray.map((e) => {
           return {id: e._id, quantity: e.quantity}
         })
-        console.log(arrayOfIds)
-        arrayOfIds.forEach(async (e) => {
+          arrayOfIds.forEach(async (e) => {
           // console.log(e.id)
           // console.log(e.quantity)
           const decreasedQuantity = e.quantity - 1
@@ -42,10 +39,11 @@ const Sell = ({ queue, setQueue, setDisplaySum }) => {
         })
       }
       adjustQuantity()
+      setDisplaySum(sum)
     };
 
     getTotal();
-
+   
 
   
 
@@ -62,8 +60,9 @@ const Sell = ({ queue, setQueue, setDisplaySum }) => {
     setSold(false)
     
   };
+  
 
-  return <button onClick={clickHandler}>Sell</button>;
+  return <button className="sell"onClick={clickHandler}>Sell</button>;
 };
 
 export default Sell;

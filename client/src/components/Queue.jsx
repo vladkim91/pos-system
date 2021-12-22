@@ -4,13 +4,20 @@ import QueueItem from './QueueItem';
 import axios from 'axios';
 import Sell from './Sell';
 
+
 const Queue = () => {
-  
-  
   const [queueList, setQueueList] = useState([]);
   const tempQueue = queueList;
-  const { sold,setSold, clicker, displaySum, setDisplaySum, setClicker, selectedMod, pendingOrder } =
-    useContext(ProductContext);
+  const {
+    sold,
+    setSold,
+    clicker,
+    displaySum,
+    setDisplaySum,
+    setClicker,
+    selectedMod,
+    pendingOrder
+  } = useContext(ProductContext);
   const [haveMod, setHaveMod] = useState(false);
   const haveModsCheck = () => {
     if (selectedMod) {
@@ -31,18 +38,27 @@ const Queue = () => {
         orders: queueList
       });
     };
-    
+
     postOnQueue();
   }, [clicker]);
 
   return (
     <div className="queue">
+      <div className="queue-items">
       {queueList.map((e, i) => (
         <QueueItem haveMod={haveMod} e={e} key={i} />
       ))}
+      </div>
+      <div className="sell-clear-buttons"> <Sell
+        setSold={setSold}
+        setDisplaySum={setDisplaySum}
+        queue={queueList}
+        setQueue={setQueueList}
+      />
+      <button className="clear"onClick={()=> {
+        setQueueList([])
+      }}>Clear</button></div>
      
-      <Sell setSold={setSold} setDisplaySum={setDisplaySum}queue={queueList} setQueue={setQueueList} />
-      <div>{displaySum}</div>
     </div>
   );
 };

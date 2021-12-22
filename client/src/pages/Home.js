@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="landing-page">
-      <h1>Mahalo</h1>
+      <h1 className="logo">Mahalo</h1>
 
       {!access ? (
         <Route

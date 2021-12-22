@@ -45,7 +45,7 @@ const Product = ({ e }) => {
     <button className="product" onClick={clickHandler}>
       <p>
         {e.name}
-        {e.quantity}
+      
       </p>
     </button>
   );
