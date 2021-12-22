@@ -1,4 +1,3 @@
-const { restart } = require('nodemon');
 const { Product, Category, Bank } = require('../models');
 
 const getAllCategories = async (req, res) => {
@@ -31,6 +30,29 @@ const getProductById = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({ error: error.message });
+  }
+};
+
+const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Product.updateOne(
+      { _id: id },
+      req.body,
+      { new: true },
+      (err, bank) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        if (!bank) {
+          res.status(500).send('Product not found!');
+        }
+        return res.status(200).json(bank);
+      }
+    );
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500);
   }
 };
 
@@ -70,7 +92,7 @@ const getBank = async (req, res) => {
   }
 };
 
-const updateProduct = async (req, res) => {
+const updateBank = async (req, res) => {
   try {
     await Bank.updateOne({}, req.body, { new: true }, (err, bank) => {
       if (err) {
@@ -94,6 +116,7 @@ module.exports = {
   getProductById,
   // addProduct
   // deleteProduct,
-  updateProduct,
-  getBank
+  updateBank,
+  getBank,
+  updateProduct
 };

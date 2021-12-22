@@ -13,7 +13,8 @@ router.get('/products', controllers.getAllProducts);
 router.get('/products/:id', controllers.getProductById);
 // router.post('/products', controllers.addProduct);
 // router.delete('/products/:id', controllers.deleteProduct);
-router.put('/banks', controllers.updateProduct);
+router.put('/products/:id', controllers.updateProduct);
+router.put('/banks', controllers.updateBank);
 router.get('/banks', controllers.getBank);
 
 // router.post('/rollercoasters/reviews', controllers.postReview);
