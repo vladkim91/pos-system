@@ -8,12 +8,12 @@ Clicked products will be rendered on queue screen until user hits send. Once pro
 
 ## Features
 
-* This app will use min 2 models for database (Products, Categories)
-* Landing page will have a login screen Component
-* About page will be routed through Login screen
-* App will display quantity of the product if it runs low
-* Funds will be added to the bank after sale
-* App will allow user to update quintity of the products or remove them
+* Render all products by category
+* Sell products added to queue
+* Clear queue component
+* Add products
+* Delete product by id
+
 
 _____________
 
