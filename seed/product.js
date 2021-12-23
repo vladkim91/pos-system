@@ -14,22 +14,46 @@ const main = async () => {
 
   const products = [
     {
-      name: 'Vodka',
-      mods: ['up', 'rocks', 'double'],
+      name: "Tito's",
+      mods: ['up', 'rocks'],
       category_id: liquor[0]._id,
       quantity: 10,
       salePrice: 9
     },
     {
-      name: 'Whiskey',
-      mods: ['up', 'rocks', 'double'],
+      name: 'Jack Daniels',
+      mods: ['up', 'rocks'],
 
       category_id: liquor[0]._id,
-      quantity: 12,
+      quantity: 15,
       salePrice: 10
     },
     {
-      name: 'Lager',
+      name: 'Jameson',
+      mods: ['up', 'rocks'],
+
+      category_id: liquor[0]._id,
+      quantity: 25,
+      salePrice: 10
+    },
+    {
+      name: 'Bombay',
+      mods: ['up', 'rocks'],
+
+      category_id: liquor[0]._id,
+      quantity: 15,
+      salePrice: 10
+    },
+    {
+      name: 'Bacardi',
+      mods: ['up', 'rocks'],
+
+      category_id: liquor[0]._id,
+      quantity: 15,
+      salePrice: 10
+    },
+    {
+      name: 'Heineken',
       mods: [],
 
       category_id: beer[0]._id,
@@ -37,15 +61,39 @@ const main = async () => {
       salePrice: 5
     },
     {
-      name: 'Ale',
+      name: 'Blue Moon',
       mods: [],
 
       category_id: beer[0]._id,
-      quantity: 45,
+      quantity: 70,
+      salePrice: 5
+    },
+    {
+      name: 'Bud Light',
+      mods: [],
+
+      category_id: beer[0]._id,
+      quantity: 65,
+      salePrice: 5
+    },
+    {
+      name: 'Coors',
+      mods: [],
+
+      category_id: beer[0]._id,
+      quantity: 78,
       salePrice: 7
     },
     {
-      name: 'Red',
+      name: 'Pinot Noir',
+      mods: [],
+
+      category_id: wine[0]._id,
+      quantity: 12,
+      salePrice: 12
+    },
+    {
+      name: 'Cabernet',
       mods: [],
 
       category_id: wine[0]._id,
@@ -53,11 +101,27 @@ const main = async () => {
       salePrice: 12
     },
     {
-      name: 'White',
+      name: 'Merlot',
       mods: [],
 
       category_id: wine[0]._id,
-      quantity: 5,
+      quantity: 13,
+      salePrice: 12
+    },
+    {
+      name: 'Pinot Grigio',
+      mods: [],
+
+      category_id: wine[0]._id,
+      quantity: 41,
+      salePrice: 12
+    },
+    {
+      name: 'Sauv Blanc',
+      mods: [],
+
+      category_id: wine[0]._id,
+      quantity: 49,
       salePrice: 10
     },
     {
@@ -73,7 +137,23 @@ const main = async () => {
       mods: [],
 
       category_id: na[0]._id,
-      quantity: 90,
+      quantity: 22,
+      salePrice: 2
+    },
+    {
+      name: 'Ginger Ale',
+      mods: [],
+
+      category_id: na[0]._id,
+      quantity: 32,
+      salePrice: 2
+    },
+    {
+      name: 'Rootbeer',
+      mods: [],
+
+      category_id: na[0]._id,
+      quantity: 45,
       salePrice: 2
     },
     {
@@ -81,7 +161,23 @@ const main = async () => {
       mods: ['hot', 'mild'],
 
       category_id: starters[0]._id,
+      quantity: 25,
+      salePrice: 12
+    },
+    {
+      name: 'Onion rings',
+      mods: [],
+
+      category_id: starters[0]._id,
       quantity: 30,
+      salePrice: 12
+    },
+    {
+      name: 'Truffle fries',
+      mods: [],
+
+      category_id: starters[0]._id,
+      quantity: 20,
       salePrice: 12
     },
     {
@@ -101,11 +197,35 @@ const main = async () => {
       salePrice: 16
     },
     {
+      name: 'Fish and Chips',
+      mods: [],
+
+      category_id: entrees[0]._id,
+      quantity: 35,
+      salePrice: 16
+    },
+    {
+      name: 'Pastrami Sand',
+      mods: ['fries', 'chips'],
+
+      category_id: entrees[0]._id,
+      quantity: 25,
+      salePrice: 16
+    },
+    {
       name: 'Meatloaf',
       mods: [],
 
       category_id: entrees[0]._id,
       quantity: 30,
+      salePrice: 18
+    },
+    {
+      name: 'Lobster Roll',
+      mods: ['hot', 'cold'],
+
+      category_id: entrees[0]._id,
+      quantity: 50,
       salePrice: 18
     },
     {
@@ -117,11 +237,20 @@ const main = async () => {
       salePrice: 9
     },
     {
-      name: 'Red velvet cake',
+      name: 'Keylime Pie',
       mods: [],
 
       category_id: dessert[0]._id,
       quantity: 15,
+      salePrice: 10
+    },
+
+    {
+      name: 'Lava cake',
+      mods: [],
+
+      category_id: dessert[0]._id,
+      quantity: 25,
       salePrice: 10
     }
   ];

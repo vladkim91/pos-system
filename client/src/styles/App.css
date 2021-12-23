@@ -28,6 +28,7 @@
   width: 300px;
   border: 4px solid grey;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .digit {
@@ -46,6 +47,9 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 10px auto 10px auto;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
 }
 
 .user-ui {
@@ -222,3 +226,121 @@
 .close-sidebar:active {
   opacity: 0.8;
  }
+
+
+ .product-list {
+   display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin: 5px auto;
+  background-color: grey;
+
+ }
+
+ .product-list > p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 900;
+ }
+
+ .quantity-close > button {
+   margin-right: 20px;
+   background-color: grey;
+   border: none;
+   color: white;
+   font-size: 20px;
+
+ }
+
+
+ .quantity-close {
+   display: flex;
+    width: 100px;
+    justify-content: space-between;
+ }
+
+ .input-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px auto;
+  background-color: white;
+  padding: 20px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  height: 280px;
+ }
+
+ .input-form > select {
+   width: 200px;
+   margin: 10px auto;
+   font-size: large;
+   font-family: 'Times New Roman', Times, serif;
+   text-align: center;
+ }
+
+.add-button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: royalblue;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  box-shadow: 0 2px 2px black;
+  margin: 0 auto;
+}
+
+.add-button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+
+}
+
+.add-button:active {
+  box-shadow: none;
+  margin-top: 2px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.container {
+  background-color: white;
+  margin: 100px 20px ;
+  color: black;
+  border: 5px solid black;
+  border-radius: 20px;
+
+
+}
+
+.container > p {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.link-wrapper > a > img{
+  width: 50px
+}
+.link-wrapper > a >img:hover {
+  width:52px;
+  opacity: 0.9;
+  
+}
+.link-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 300px;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  height: 100px;
+  box-shadow: 2px 2px 2px black;
+}
+.contact-info > h1 {
+  margin: 20px;
+}

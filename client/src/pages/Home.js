@@ -9,9 +9,10 @@ import '../styles/App.css';
 import SideBar from '../components/SideBar';
 import menuIcon from '../images/menu.png';
 import Inventory from '../components/Inventory';
+import Contact from '../components/Contact';
 
 const Home = () => {
-  const [access, setAccess] = useState(true);
+  const [access, setAccess] = useState(false);
   const [passcode, setPasscode] = useState('');
   const [message, setMessage] = useState('Use your passcode to login');
   const [sidebarToggled, setSidebarToggled] = useState(false);
@@ -93,6 +94,7 @@ const Home = () => {
       />
 
       <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
     </div>
   );
 };
