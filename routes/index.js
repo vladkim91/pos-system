@@ -11,7 +11,7 @@ router.get('/', (req, res) => res.send('This is root!'));
 router.get('/categories', controllers.getAllCategories);
 router.get('/products', controllers.getAllProducts);
 router.get('/products/:id', controllers.getProductById);
-// router.post('/products', controllers.addProduct);
+router.post('/products', controllers.addProduct);
 router.delete('/products/:id', controllers.deleteProduct);
 router.put('/products/:id', controllers.updateProduct);
 router.put('/banks', controllers.updateBank);

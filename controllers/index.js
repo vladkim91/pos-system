@@ -56,18 +56,18 @@ const updateProduct = async (req, res) => {
   }
 };
 
-// const addProduct = async (req, res) => {
-//   try {
-//     const product = await new Product(req.body);
-//     await product.save();
+const addProduct = async (req, res) => {
+  try {
+    const product = await new Product(req.body);
+    await product.save();
 
-//     return res.status(201).json({
-//       product
-//     });
-//   } catch (error) {
-//     return res.status(500).json({ error: error.message });
-//   }
-// };
+    return res.status(201).json({
+      product
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
 
 const deleteProduct = async (req, res) => {
   try {
@@ -114,7 +114,7 @@ module.exports = {
   getAllCategories,
   getAllProducts,
   getProductById,
-  // addProduct
+  addProduct,
   deleteProduct,
   updateBank,
   getBank,
