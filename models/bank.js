@@ -2,7 +2,8 @@ const { Schema } = require('mongoose');
 
 const Bank = new Schema(
   {
-    orders: { type: Array }
+    orders: { type: Array },
+    totalSales: { type: Number }
   },
   { timestamps: true }
 );

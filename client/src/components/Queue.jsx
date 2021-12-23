@@ -3,8 +3,7 @@ import { ProductContext } from '../ProductContext';
 import QueueItem from './QueueItem';
 import axios from 'axios';
 import Sell from './Sell';
-import {BASE_URL} from '../globals'
-
+import { BASE_URL } from '../globals';
 
 const Queue = () => {
   const [queueList, setQueueList] = useState([]);
@@ -33,7 +32,7 @@ const Queue = () => {
 
   useEffect(() => {
     setQueueList([...tempQueue, pendingOrder]);
-    console.log(queueList);
+
     const postOnQueue = async () => {
       const res = await axios.put(`${BASE_URL}/banks`, {
         orders: queueList
@@ -46,20 +45,27 @@ const Queue = () => {
   return (
     <div className="queue">
       <div className="queue-items">
-      {queueList.map((e, i) => (
-        <QueueItem haveMod={haveMod} e={e} key={i} />
-      ))}
+        {queueList.map((e, i) => (
+          <QueueItem haveMod={haveMod} e={e} key={i} />
+        ))}
       </div>
-      <div className="sell-clear-buttons"> <Sell
-        setSold={setSold}
-        setDisplaySum={setDisplaySum}
-        queue={queueList}
-        setQueue={setQueueList}
-      />
-      <button className="clear"onClick={()=> {
-        setQueueList([])
-      }}>Clear</button></div>
-     
+      <div className="sell-clear-buttons">
+        {' '}
+        <Sell
+          setSold={setSold}
+          setDisplaySum={setDisplaySum}
+          queue={queueList}
+          setQueue={setQueueList}
+        />
+        <button
+          className="clear"
+          onClick={() => {
+            setQueueList([]);
+          }}
+        >
+          Clear
+        </button>
+      </div>
     </div>
   );
 };

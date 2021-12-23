@@ -7,7 +7,7 @@ const main = async () => {
   const bank = [
     {
       orders: [],
-      bank: 0
+      totalSales: 0
     }
   ];
 

@@ -12,7 +12,7 @@ const Inventory = ({currentCategory}) => {
     salePrice: 0,
     category_id: ''
   });
-  const [splitString, setSplitString] = useState('')
+
 
   const changeNameHandler = (e) => {
     setInput({ ...input, name: e.target.value });

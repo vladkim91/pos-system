@@ -17,17 +17,9 @@ const Product = ({ e }) => {
   } = useContext(ProductContext);
 
   const [runningLow, setRunningLow] = useState(false);
-  useEffect(() => {
-    if (e.quantity < 10) {
-      setRunningLow(true);
-      console.log(e.name, e.quantity);
-    } else if (e.quantity < 1) {
-      const removeItem = async () => {
-        const res = await axios.delete(`${BASE_URL}/products/${e._id}`)
-      }
-      removeItem()
-    }
-  }, [sold]);
+ 
+  
+
 
   const clickHandler = async () => {
     setPendingOrder(e);
@@ -40,6 +32,7 @@ const Product = ({ e }) => {
       setMods(e.mods);
       setClicked(true);
     }
+    
   };
 
   return (
