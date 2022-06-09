@@ -16,7 +16,6 @@ const Home = () => {
   const [passcode, setPasscode] = useState('');
   const [message, setMessage] = useState('Use your passcode to login');
   const [sidebarToggled, setSidebarToggled] = useState(false);
-
   const [currentCategory, setCurrentCategory] = useState({});
 
   useEffect(() => {
